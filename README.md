@@ -1,2 +1,7 @@
-# SmartOrderManagementSystem
-A microservices-based backend application for managing products, orders, users, and payments with real-time communication using Kafka, caching via Redis, and fault tolerance using circuit breakers. Includes a React + Redux + TypeScript admin dashboard. All services run locally using Docker and Docker Compose.
+#studentSearchApplication
+studentSearchApplication is a full-stack microservice-based application built with Spring Boot (backend) and React (frontend) that allows you to:
+Retrieve student data from a dummy JSON source
+Assign departments like ME, CS, or ECE
+Store user data in an in-memory H2 database
+Search/filter students by department or ID
+Log API activity using Kafka, through a custom LoggerService microservice
