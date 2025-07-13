@@ -1,5 +1,4 @@
 **studentSearchApplication**
-
 studentSearchApplication is a full-stack microservice-based application built with Spring Boot (backend) and React (frontend) that allows you to:
 Retrieve student data from a dummy JSON source
 Assign departments like ME, CS, or ECE
