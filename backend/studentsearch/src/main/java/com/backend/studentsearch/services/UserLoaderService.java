@@ -1,5 +1,6 @@
 package com.backend.studentsearch.services;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,11 @@ public class UserLoaderService {
 
     public List<User> getUserByDepartment(String department) {
         return userRepository.findByDepartment(department);
+    }
+
+    public List<String> getDepartments() {
+        List<String> departmentData = Arrays.asList(departments.split(","));
+        return departmentData;
     }
 
     @PostConstruct

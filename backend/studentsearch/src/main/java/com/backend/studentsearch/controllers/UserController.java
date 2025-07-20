@@ -36,13 +36,17 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public ResponseEntity<List<User>> getUsers() {
-        List<User> users = userLoaderService.getAllUser();
-        if (users.isEmpty()) {
-            throw new ResourceNotFoundException("Data is unavailable");
+    public ResponseEntity<List<User>> getUsers(@RequestParam String department) {
+        List<User> userList;
+        if (!(department != null) || !department.isEmpty()) {
+            userList = userLoaderService.getUserByDepartment(department);
         } else {
-            return ResponseEntity.ok(users);
+            userList = userLoaderService.getAllUser();
         }
+        if (userList.isEmpty()) {
+            throw new ResourceNotFoundException("Data not found");
+        } 
+        return ResponseEntity.ok(userList);
     }
 
     @Operation(summary = "Get all users with pagination")
@@ -57,13 +61,12 @@ public class UserController {
         return userRepository.findAll(pageRequest);
     }
 
-    @GetMapping("/by-department")
-    public ResponseEntity<List<User>> getUserByDepartment(@RequestParam String department) {
-        List<User> users = userLoaderService.getUserByDepartment(department);
-        if (users.isEmpty()) {
-            throw new ResourceNotFoundException("Data is unavailable for department: " + department);
-        } else {
-            return ResponseEntity.ok(users);
+    @GetMapping("/departments")
+    public ResponseEntity<List<String>> getDepartments() {
+        List<String> departments = userLoaderService.getDepartments();
+        if (departments.isEmpty()) {
+            throw new ResourceNotFoundException("No department found");
         }
+        return ResponseEntity.ok(departments);
     }
 }
