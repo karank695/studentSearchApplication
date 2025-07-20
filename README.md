@@ -7,5 +7,9 @@ studentSearchApplication is a full-stack microservice-based application built wi
 - Log API activity using Kafka, through a custom LoggerService microservice<br><br>
 **Swagger Implementation**
 ![Swagger Screenshot](https://github.com/karank695/studentSearchApplication/blob/main/backend/studentsearch/src/main/resources/images/swagger.png?raw=true)
+<br>
+**Users Data**
+![Swagger Screenshot](https://github.com/karank695/studentSearchApplication/blob/main/frontend/studentsearch/src/main/resources/images/userDisplay.png?raw=true)
+  
   
 
