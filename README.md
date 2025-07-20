@@ -5,3 +5,5 @@ studentSearchApplication is a full-stack microservice-based application built wi
 - Store user data in an in-memory H2 database
 - Search/filter students by department or ID
 - Log API activity using Kafka, through a custom LoggerService microservice
+**Swagger Implementation**
+  <img src="images/swagger.png" alt="Logo" width="200"/>
