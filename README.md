@@ -9,7 +9,7 @@ studentSearchApplication is a full-stack microservice-based application built wi
 ![Swagger Screenshot](https://github.com/karank695/studentSearchApplication/blob/main/backend/studentsearch/src/main/resources/images/swagger.png?raw=true)
 <br>
 **Users Data**
-![Swagger Screenshot](https://github.com/karank695/studentSearchApplication/blob/main/frontend/studentsearch/src/assets/userDisplay.png?raw=true)
+![Users Data](https://raw.githubusercontent.com/karank695/studentSearchApplication/main/frontend/studentsearch/src/assets/userDisplay.png)
   
   
 
